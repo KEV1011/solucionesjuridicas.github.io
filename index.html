@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluciones Jurídicas</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fuente de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ✅ Menú de navegación -->
+    <nav>
+        <button id="menu-btn">☰ Menú</button>
+        <ul id="menu" class="hidden">
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#testimonios">Testimonios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- ✅ Sección de Inicio -->
+    <section id="home">
+        <div class="hero">
+            <h1>Soluciones Jurídicas</h1>
+            <p>En Soluciones Jurídicas ofrecemos asesoría legal en línea para resolver casos arbitrarios. ¡Pregúntanos!</p>
+        </div>
+    </section>
+
+    <!-- ✅ Sección de Servicios -->
+    <section id="servicios">
+        <h2>Nuestros Servicios</h2>
+        <div class="servicios-container reveal">
+            <div class="servicio">
+                <img src="datacredito-748x393.jpg" alt="Eliminación de Reportes">
+                <h3>Eliminación de Reportes Negativos</h3>
+                <p>Te ayudamos a eliminar reportes negativos de tu historial crediticio de manera rápida y efectiva.</p>
+                <a href="#contacto" class="btn">Contáctanos</a>
+            </div>
+            <div class="servicio">
+                <img src="AZBSCZF5NNGQFPXXBTBKDRGCFQ.jpg" alt="Créditos">
+                <h3>No pagues más por objetos robados</h3>
+                <p>Te asesoramos para que no tengas que pagar créditos por objetos robados.</p>
+                <a href="#contacto" class="btn">Contáctanos</a>
+            </div>
+            <div class="servicio">
+                <img src="649b09a5876ee.jpeg" alt="Fotodetecciones">
+                <h3>Impugnación de Fotodetecciones Arbitrarias</h3>
+                <p>Te ayudamos a impugnar multas por fotodetecciones injustas.</p>
+                <a href="#contacto" class="btn">Contáctanos</a>
+            </div>
+            <div class="servicio">
+                <img src="insolvencia.jpg" alt="Ley de Insolvencia">
+                <h3>Asesoría en Ley de Insolvencia</h3>
+                <p>¿Tienes dos o más deudas con entidades públicas o privadas? Te asesoramos en tu proceso de insolvencia económica para negociar o liquidar tus obligaciones de manera legal.</p>
+                <a href="#contacto" class="btn">Contáctanos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ✅ Sección de Testimonios -->
+    <section id="testimonios">
+        <h2>Testimonios</h2>
+        <div class="testimonios-container">
+            <div class="testimonio">
+                <p>"Excelente servicio, me ayudaron a resolver mi problema rápidamente."</p>
+                <p><strong>- Juan Pérez</strong></p>
+            </div>
+            <div class="testimonio">
+                <p>"Muy profesionales, los recomiendo."</p>
+                <p><strong>- María Gómez</strong></p>
+            </div>
+            <div class="testimonio">
+                <p>"Gracias a su asesoría, pude eliminar un reporte negativo de mi historial crediticio."</p>
+                <p><strong>- Carlos López</strong></p>
+            </div>
+            <div class="testimonio">
+                <p>"Impugnaron una fotomulta que recibí injustamente. ¡Excelente trabajo!"</p>
+                <p><strong>- Ana Martínez</strong></p>
+            </div>
+            <div class="testimonio">
+                <p>"Muy atentos y eficientes. Resolvieron mi caso en tiempo récord."</p>
+                <p><strong>- Pedro Ramírez</strong></p>
+            </div>
+            <div class="testimonio">
+                <p>"Los recomiendo ampliamente. Son expertos en lo que hacen."</p>
+                <p><strong>- Laura Torres</strong></p>
+            </div>
+        </div>
+    </section>
+
+   
+  <!-- ✅ Sección de Contacto -->
+<section id="contacto">
+    <h2>Contacto</h2>
+    <form action="mailto:solucionesjuridicas19@gmail.com" method="post" enctype="text/plain">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="email">Correo:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="message">Mensaje:</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit" class="btn">Enviar</button>
+    </form>
+</section>
+
+    <!-- ✅ Sección de Preguntas Frecuentes -->
+    <section id="faq">
+        <h2>Preguntas Frecuentes</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <h3>¿Cómo puedo eliminar un reporte negativo?</h3>
+                <p>Te ayudamos a revisar tu historial crediticio y a presentar las impugnaciones necesarias para eliminar reportes negativos.</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿Qué hago si recibí una fotomulta injusta?</h3>
+                <p>Te asesoramos para impugnar fotomultas arbitrarias y evitar pagos injustos.</p>
+            </div>
+            <!-- Zona de Sugerencias o Comentarios -->
+            <div class="sugerencias">
+                <h3>¿Tienes alguna sugerencia o comentario?</h3>
+                <p>¡Nos encantaría escucharte! Califica nuestro servicio y déjanos tus comentarios.</p>
+                <form id="sugerencias-form">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    <br>
+                    <label for="calificacion">Calificación:</label>
+                    <select id="calificacion" name="calificacion" required>
+                        <option value="5">⭐️⭐️⭐️⭐️⭐️ (Excelente)</option>
+                        <option value="4">⭐️⭐️⭐️⭐️ (Muy bueno)</option>
+                        <option value="3">⭐️⭐️⭐️ (Bueno)</option>
+                        <option value="2">⭐️⭐️ (Regular)</option>
+                        <option value="1">⭐️ (Malo)</option>
+                    </select>
+                    <br>
+                    <label for="comentario">Comentario:</label>
+                    <textarea id="comentario" name="comentario" required></textarea>
+                    <br>
+                    <button type="submit" class="btn">Enviar</button>
+                </form>
+                <div id="sugerencias-confirmacion" class="hidden">¡Gracias por tu comentario! Lo tendremos en cuenta para mejorar.</div>
+            </div>
+        </div>
+    </section>
+
+   <!-- ✅ Sección de Jurisprudencia -->
+<section id="jurisprudencia">
+    <h2>Jurisprudencia</h2>
+    <div class="jurisprudencia-container">
+        <div class="caso">
+            <h3>Eliminación de Reportes Negativos</h3>
+            <p><strong>Caso:</strong> Sentencia T-883/2013</p>
+            <p><strong>Resumen:</strong> El tribunal falló a favor del demandante, ordenando la eliminación de reportes negativos debido a errores en la información.</p>
+            <a href="https://www.corteconstitucional.gov.co/relatoria/2013/T-883-13.htm" class="btn" target="_blank">Leer más</a>
+        </div>
+        <div class="caso">
+            <h3>Impugnación de Fotomultas</h3>
+            <p><strong>Caso:</strong> Sentencia C-456/2022</p>
+            <p><strong>Resumen:</strong> La corte determinó que las fotomultas deben ser impugnables si no hay evidencia clara de la infracción.</p>
+            <a href="https://www.corteconstitucional.gov.co/relatoria/2022/C-321-22.htm" class="btn" target="_blank">Leer más</a>
+        </div>
+        <div class="caso">
+            <h3>Derechos del Consumidor</h3>
+            <p><strong>Caso:</strong> Sentencia A-789/2021</p>
+            <p><strong>Resumen:</strong> Se estableció que los consumidores tienen derecho a reclamar por productos defectuosos sin costo adicional.</p>
+            <a href="https://www.corteconstitucional.gov.co/relatoria/2024/C-278-24.htm" class="btn" target="_blank">Leer más</a>
+        </div>
+        <!-- Video de YouTube -->
+        
+    </div>
+</section>
+
+    <!-- ✅ Botón de WhatsApp Flotante -->
+    <a href="https://wa.me/573502106033" class="whatsapp-float" target="_blank">
+        <img src="WhatsApp_icon.png" alt="WhatsApp">
+    </a>
+
+    <!-- ✅ Footer -->
+    <footer>
+        <p>&copy; 2025 Soluciones Jurídicas. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- ✅ Script de JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soluciones Jurídicas | Defensa Legal Especializada</title>
+  <meta name="description" content="Expertos en derecho administrativo, nulidad de fotomultas e infracciones de tránsito, y protección de datos personales / Habeas Data en Colombia." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══════════════ LOADER ══════════════ -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo-wrap">
+        <img src="Gemini_Generated_Image_y37xbry37xbry37x.png" alt="Soluciones Jurídicas" class="loader-logo" />
+      </div>
+      <div class="loader-bar"><div class="loader-progress"></div></div>
+    </div>
+  </div>
+
+  <!-- ══════════════ NAV ══════════════ -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <img src="Gemini_Generated_Image_y37xbry37xbry37x.png" alt="Soluciones Jurídicas" class="nav-logo-img" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#proceso">Proceso</a></li>
+        <li><a href="#resultados">Resultados</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#calculador" class="nav-cta">Evaluar mi Caso</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Menú"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- ══════════════ HERO ══════════════ -->
+  <section id="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow" data-anim="fade-up">DEFENSA LEGAL ESPECIALIZADA</p>
+      <h1 class="hero-title" data-anim="fade-up" data-delay="0.15">
+        Su derecho<br/>
+        <span class="gradient-text">merece defenderse</span><br/>
+        con precisión.
+      </h1>
+      <p class="hero-subtitle" data-anim="fade-up" data-delay="0.3">
+        Más de <strong>500 infracciones anuladas</strong>. Expertos en fotomultas,<br/>
+        habeas data y derecho administrativo en Colombia.
+      </p>
+      <div class="hero-actions" data-anim="fade-up" data-delay="0.45">
+        <a href="#calculador" class="btn btn-primary magnetic">
+          <span>Iniciar proceso de defensa</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="#servicios" class="btn btn-ghost magnetic">
+          <span>Conocer servicios</span>
+        </a>
+      </div>
+      <div class="hero-badges" data-anim="fade-up" data-delay="0.6">
+        <div class="badge"><i class="fa-solid fa-shield-halved"></i><span>+500 casos resueltos</span></div>
+        <div class="badge"><i class="fa-solid fa-clock"></i><span>Respuesta en 24h</span></div>
+        <div class="badge"><i class="fa-solid fa-star"></i><span>4.9 / 5 satisfacción</span></div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Desliza para explorar</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ══════════════ MIRROR IDENTITY ══════════════ -->
+  <section id="mirror" class="section-dark">
+    <div class="container">
+      <div class="section-header" data-anim="fade-up">
+        <p class="eyebrow">¿Cuál es su situación?</p>
+        <h2>Reconozca su problema.<br/><span class="gradient-text">Encontremos la solución.</span></h2>
+        <p class="section-sub">Seleccione la situación que mejor lo describe y le mostraremos el camino de defensa.</p>
+      </div>
+      <div class="mirror-grid" id="mirror-grid">
+        <button class="mirror-card" data-problem="fotomulta">
+          <div class="mirror-icon"><i class="fa-solid fa-camera-slash"></i></div>
+          <h3>Recibí una fotomulta o comparendo injusto</h3>
+          <p>Notificación por infracción de tránsito que no cometió o con irregularidades.</p>
+          <span class="mirror-tag">Ver solución <i class="fa-solid fa-chevron-right"></i></span>
+        </button>
+        <button class="mirror-card" data-problem="datacredito">
+          <div class="mirror-icon"><i class="fa-solid fa-ban"></i></div>
+          <h3>Tengo un reporte negativo en DataCrédito</h3>
+          <p>Su historial crediticio tiene registros que afectan su vida financiera.</p>
+          <span class="mirror-tag">Ver solución <i class="fa-solid fa-chevron-right"></i></span>
+        </button>
+        <button class="mirror-card" data-problem="peticion">
+          <div class="mirror-icon"><i class="fa-solid fa-file-circle-exclamation"></i></div>
+          <h3>Una entidad ignoró mi derecho de petición</h3>
+          <p>Sus derechos fundamentales fueron vulnerados por silencio administrativo.</p>
+          <span class="mirror-tag">Ver solución <i class="fa-solid fa-chevron-right"></i></span>
+        </button>
+        <button class="mirror-card" data-problem="insolvencia">
+          <div class="mirror-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+          <h3>Tengo deudas que no puedo pagar</h3>
+          <p>Busca una salida legal para reorganizar sus obligaciones financieras.</p>
+          <span class="mirror-tag">Ver solución <i class="fa-solid fa-chevron-right"></i></span>
+        </button>
+      </div>
+      <div class="mirror-solution hidden" id="mirror-solution">
+        <button class="solution-close" id="solution-close"><i class="fa-solid fa-xmark"></i></button>
+        <div class="solution-content" id="solution-content"></div>
+        <a href="#calculador" class="btn btn-primary magnetic solution-cta">
+          <span>Evaluar viabilidad de mi caso</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ SERVICIOS ══════════════ -->
+  <section id="servicios" class="section-mid">
+    <div class="container">
+      <div class="section-header" data-anim="fade-up">
+        <p class="eyebrow">Áreas de práctica</p>
+        <h2>Servicios <span class="gradient-text">especializados</span></h2>
+      </div>
+      <div class="services-grid">
+
+        <article class="service-card glass" data-anim="fade-up" data-delay="0.0">
+          <div class="card-glow"></div>
+          <div class="card-image-wrap">
+            <img src="649b09a5876ee.jpeg" alt="Fotomultas e infracciones de tránsito Colombia" loading="lazy" />
+            <div class="card-image-overlay"></div>
+            <div class="service-icon-over"><i class="fa-solid fa-camera-slash"></i></div>
+          </div>
+          <div class="card-body">
+            <h3>Nulidad de Fotomultas e Infracciones</h3>
+            <p>Impugnamos comparendos y fotomultas con irregularidades procedimentales o probatorias.</p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-check"></i> Análisis de validez probatoria</li>
+              <li><i class="fa-solid fa-check"></i> Recursos de reposición y apelación</li>
+              <li><i class="fa-solid fa-check"></i> Representación ante organismos de tránsito</li>
+            </ul>
+            <a href="landing-fotomultas.html" class="card-link">Revisar mi caso <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="service-card glass" data-anim="fade-up" data-delay="0.1">
+          <div class="card-glow"></div>
+          <div class="card-image-wrap">
+            <img src="datacredito-748x393.jpg" alt="Protección de datos y habeas data DataCrédito" loading="lazy" />
+            <div class="card-image-overlay"></div>
+            <div class="service-icon-over"><i class="fa-solid fa-database"></i></div>
+          </div>
+          <div class="card-body">
+            <h3>Protección de Datos / Habeas Data</h3>
+            <p>Eliminamos o corregimos reportes negativos en centrales de riesgo mediante la Ley 1266 y 1581.</p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-check"></i> Supresión en DataCrédito y Cifin</li>
+              <li><i class="fa-solid fa-check"></i> Acciones de tutela y habeas data</li>
+              <li><i class="fa-solid fa-check"></i> Asesoría ante la SIC</li>
+            </ul>
+            <a href="landing-centrales-riesgo.html" class="card-link">Revisar mi caso <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="service-card glass" data-anim="fade-up" data-delay="0.2">
+          <div class="card-glow"></div>
+          <div class="card-image-wrap">
+            <img src="AZBSCZF5NNGQFPXXBTBKDRGCFQ.jpg" alt="Derecho administrativo y derechos de petición Colombia" loading="lazy" />
+            <div class="card-image-overlay"></div>
+            <div class="service-icon-over"><i class="fa-solid fa-landmark"></i></div>
+          </div>
+          <div class="card-body">
+            <h3>Derecho Administrativo</h3>
+            <p>Tramitamos derechos de petición, tutelas y recursos ante entidades del Estado.</p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-check"></i> Derechos de petición urgentes</li>
+              <li><i class="fa-solid fa-check"></i> Acciones de tutela</li>
+              <li><i class="fa-solid fa-check"></i> Recursos administrativos</li>
+            </ul>
+            <a href="#calculador" class="card-link">Revisar mi caso <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="service-card glass" data-anim="fade-up" data-delay="0.3">
+          <div class="card-glow"></div>
+          <div class="card-image-wrap">
+            <img src="insolvencia.jpg" alt="Insolvencia y liquidación de persona natural Colombia" loading="lazy" />
+            <div class="card-image-overlay"></div>
+            <div class="service-icon-over"><i class="fa-solid fa-handshake-angle"></i></div>
+          </div>
+          <div class="card-body">
+            <h3>Insolvencia de Persona Natural</h3>
+            <p>Acompañamos procesos de insolvencia permitiéndole reorganizar sus deudas y proteger su patrimonio.</p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-check"></i> Negociación de deudas</li>
+              <li><i class="fa-solid fa-check"></i> Proceso de liquidación patrimonial</li>
+              <li><i class="fa-solid fa-check"></i> Gestión ante acreedores</li>
+            </ul>
+            <a href="landing-insolvencia.html" class="card-link">Revisar mi caso <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ RESULTADOS / COUNTERS ══════════════ -->
+  <section id="resultados" class="section-dark stats-section">
+    <div class="container">
+      <div class="section-header" data-anim="fade-up">
+        <p class="eyebrow">Resultados concretos</p>
+        <h2>Números que<br/><span class="gradient-text">respaldan nuestra defensa</span></h2>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-item" data-anim="fade-up" data-delay="0.0">
+          <div class="stat-row">
+            <span class="stat-number counter" data-target="500">0</span><span class="stat-plus">+</span>
+          </div>
+          <p>Infracciones anuladas</p>
+        </div>
+        <div class="stat-item" data-anim="fade-up" data-delay="0.1">
+          <div class="stat-row">
+            <span class="stat-number counter" data-target="320">0</span><span class="stat-plus">+</span>
+          </div>
+          <p>Reportes negativos eliminados</p>
+        </div>
+        <div class="stat-item" data-anim="fade-up" data-delay="0.2">
+          <div class="stat-row">
+            <span class="stat-number counter" data-target="98">0</span><span class="stat-plus">%</span>
+          </div>
+          <p>Tasa de éxito en habeas data</p>
+        </div>
+        <div class="stat-item" data-anim="fade-up" data-delay="0.3">
+          <div class="stat-row">
+            <span class="stat-number counter" data-target="24">0</span><span class="stat-plus">h</span>
+          </div>
+          <p>Tiempo de respuesta inicial</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ PROCESO ══════════════ -->
+  <section id="proceso" class="section-mid">
+    <div class="container">
+      <div class="section-header" data-anim="fade-up">
+        <p class="eyebrow">Metodología</p>
+        <h2>Su defensa en<br/><span class="gradient-text">4 pasos claros</span></h2>
+      </div>
+      <div class="process-timeline">
+        <div class="process-line"></div>
+        <div class="process-step" data-anim="fade-up" data-delay="0.0">
+          <div class="step-number">01</div>
+          <div class="step-body">
+            <h3>Diagnóstico Inicial</h3>
+            <p>Analizamos su caso en detalle para determinar viabilidad y estrategia legal óptima. Sin costo y sin compromiso.</p>
+          </div>
+        </div>
+        <div class="process-step" data-anim="fade-up" data-delay="0.1">
+          <div class="step-number">02</div>
+          <div class="step-body">
+            <h3>Estrategia Personalizada</h3>
+            <p>Diseñamos la ruta jurídica más efectiva según su situación específica, normativa vigente y precedentes favorables.</p>
+          </div>
+        </div>
+        <div class="process-step" data-anim="fade-up" data-delay="0.2">
+          <div class="step-number">03</div>
+          <div class="step-body">
+            <h3>Ejecución y Seguimiento</h3>
+            <p>Gestionamos todos los trámites. Usted recibe actualizaciones constantes sobre el avance de su proceso.</p>
+          </div>
+        </div>
+        <div class="process-step" data-anim="fade-up" data-delay="0.3">
+          <div class="step-number">04</div>
+          <div class="step-body">
+            <h3>Resolución Favorable</h3>
+            <p>Obtenemos el resultado que merece: multa anulada, reporte eliminado, o derecho restituido, documentado y firmado.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ CALCULADOR DE VIABILIDAD ══════════════ -->
+  <section id="calculador" class="section-dark calc-section">
+    <div class="container">
+      <div class="section-header" data-anim="fade-up">
+        <p class="eyebrow">Herramienta gratuita</p>
+        <h2>Calculador de<br/><span class="gradient-text">Viabilidad Legal</span></h2>
+        <p class="section-sub">Responda 3 preguntas rápidas y descubra la fortaleza jurídica de su caso.</p>
+      </div>
+
+      <div class="calc-wrapper" data-anim="fade-up" data-delay="0.2">
+        <div class="calc-progress-bar">
+          <div class="calc-progress-fill" id="calc-progress"></div>
+          <span class="calc-progress-label" id="calc-progress-label">Paso 1 de 3</span>
+        </div>
+
+        <div class="calc-steps">
+
+          <div class="calc-step active" id="calc-step-1">
+            <h3>¿Qué tipo de problema legal enfrenta?</h3>
+            <div class="calc-options">
+              <button class="calc-opt" data-step="1" data-value="fotomulta">
+                <i class="fa-solid fa-camera-slash"></i>
+                <span>Fotomulta o infracción de tránsito</span>
+              </button>
+              <button class="calc-opt" data-step="1" data-value="datacredito">
+                <i class="fa-solid fa-ban"></i>
+                <span>Reporte negativo en centrales de riesgo</span>
+              </button>
+              <button class="calc-opt" data-step="1" data-value="peticion">
+                <i class="fa-solid fa-file-circle-exclamation"></i>
+                <span>Silencio o negligencia de entidad pública</span>
+              </button>
+              <button class="calc-opt" data-step="1" data-value="insolvencia">
+                <i class="fa-solid fa-scale-balanced"></i>
+                <span>Deudas impagables / insolvencia</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="calc-step" id="calc-step-2">
+            <h3>¿Cuánto tiempo lleva esta situación afectándole?</h3>
+            <div class="calc-options three-col">
+              <button class="calc-opt" data-step="2" data-value="reciente">
+                <i class="fa-solid fa-bolt"></i>
+                <span>Menos de 3 meses</span>
+              </button>
+              <button class="calc-opt" data-step="2" data-value="medio">
+                <i class="fa-solid fa-hourglass-half"></i>
+                <span>Entre 3 y 12 meses</span>
+              </button>
+              <button class="calc-opt" data-step="2" data-value="largo">
+                <i class="fa-solid fa-calendar-xmark"></i>
+                <span>Más de un año</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="calc-step" id="calc-step-3">
+            <h3>¿Ha iniciado alguna gestión previa?</h3>
+            <div class="calc-options three-col">
+              <button class="calc-opt" data-step="3" data-value="ninguna">
+                <i class="fa-solid fa-circle-xmark"></i>
+                <span>No he hecho nada aún</span>
+              </button>
+              <button class="calc-opt" data-step="3" data-value="informal">
+                <i class="fa-solid fa-phone"></i>
+                <span>Llamé / fui personalmente, sin resultado</span>
+              </button>
+              <button class="calc-opt" data-step="3" data-value="formal">
+                <i class="fa-solid fa-file-signature"></i>
+                <span>Envié documentos formales sin respuesta</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="calc-step" id="calc-step-result">
+            <div class="calc-result-header">
+              <div class="viability-gauge" id="viability-gauge">
+                <svg viewBox="0 0 120 70" class="gauge-svg">
+                  <path d="M10 60 A50 50 0 0 1 110 60" stroke="#1e2d3d" stroke-width="10" fill="none"/>
+                  <path class="gauge-arc" id="gauge-arc" d="M10 60 A50 50 0 0 1 110 60" stroke="#C5A059" stroke-width="10" fill="none" stroke-dasharray="157" stroke-dashoffset="157"/>
+                </svg>
+                <div class="gauge-score" id="gauge-score">0%</div>
+                <p class="gauge-label" id="gauge-label">Calculando…</p>
+              </div>
+            </div>
+            <div class="calc-result-body" id="calc-result-body"></div>
+            <div class="calc-contact-form">
+              <h4>Reciba el análisis completo de su caso</h4>
+              <div class="form-row">
+                <input type="text" id="calc-name" placeholder="Su nombre" autocomplete="name" />
+                <input type="tel" id="calc-phone" placeholder="WhatsApp / Teléfono" autocomplete="tel" />
+              </div>
+              <input type="email" id="calc-email" placeholder="Correo electrónico" autocomplete="email" />
+              <button class="btn btn-primary magnetic" id="calc-submit">
+                <span>Enviar y obtener mi diagnóstico gratuito</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ TESTIMONIOS ══════════════ -->
+  <section id="testimonios" class="section-mid">
+    <div class="container">
+      <div class="section-header" data-anim="fade-up">
+        <p class="eyebrow">Lo que dicen nuestros clientes</p>
+        <h2>Casos reales,<br/><span class="gradient-text">resultados reales</span></h2>
+      </div>
+      <div class="testimonials-wrapper">
+        <div class="testimonials-track" id="testimonials-track">
+          <div class="testimonial glass">
+            <div class="test-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p>"Tenía una fotomulta que no era mía. En menos de 60 días la anularon completamente. El proceso fue transparente de principio a fin."</p>
+            <div class="test-author"><strong>Carlos M.</strong><span>Bogotá</span></div>
+          </div>
+          <div class="testimonial glass">
+            <div class="test-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p>"Llevaba 2 años con un reporte en DataCrédito que no era correcto. En 45 días el equipo logró eliminarlo. Por fin puedo acceder a créditos."</p>
+            <div class="test-author"><strong>Diana R.</strong><span>Medellín</span></div>
+          </div>
+          <div class="testimonial glass">
+            <div class="test-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p>"El proceso de insolvencia fue manejado con profesionalismo total. Pude reorganizar mis deudas y proteger mi carro y mi computador de trabajo."</p>
+            <div class="test-author"><strong>Andrés T.</strong><span>Cali</span></div>
+          </div>
+          <div class="testimonial glass">
+            <div class="test-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p>"Una entidad del Estado me ignoró por meses. Enviaron el derecho de petición correcto y en 10 días tuve respuesta oficial. Excelente gestión."</p>
+            <div class="test-author"><strong>Luz E.</strong><span>Barranquilla</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonials-nav">
+        <button id="test-prev"><i class="fa-solid fa-arrow-left"></i></button>
+        <button id="test-next"><i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ FAQ ══════════════ -->
+  <section id="faq" class="section-dark">
+    <div class="container faq-container">
+      <div class="section-header" data-anim="fade-up">
+        <p class="eyebrow">Preguntas frecuentes</p>
+        <h2>Todo lo que necesita<br/><span class="gradient-text">saber antes de comenzar</span></h2>
+      </div>
+      <div class="faq-list" data-anim="fade-up" data-delay="0.2">
+
+        <details class="faq-item">
+          <summary>¿Cuánto cuesta una consulta inicial?</summary>
+          <p>La consulta y el diagnóstico de viabilidad de su caso son completamente gratuitos. Solo pagará honorarios si decidimos proceder con la gestión legal.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿En cuánto tiempo puedo ver resultados?</summary>
+          <p>Depende del tipo de caso. Las fotomultas suelen resolverse en 30 a 90 días. Los reportes negativos en centrales de riesgo toman entre 30 y 60 días. Los derechos de petición tienen respuesta legal en 15 días hábiles.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Qué pasa si mi fotomulta ya está en cobro coactivo?</summary>
+          <p>Aún es posible actuar. Existen mecanismos de nulidad procesal que podemos interponer incluso en etapa de cobro. Lo primero es analizar el expediente completo.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Pueden ayudarme si vivo fuera de Bogotá?</summary>
+          <p>Sí. Gestionamos casos en todo el territorio nacional. La mayoría de trámites se realizan de manera virtual, sin necesidad de desplazamientos costosos.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary>¿Qué tan seguro es el proceso de habeas data?</summary>
+          <p>Muy seguro. Nos basamos en la Ley Estatutaria 1266 de 2008 y la Ley 1581 de 2012. La acción de habeas data es un derecho constitucional fundamental en Colombia.</p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ CTA FINAL ══════════════ -->
+  <section id="cta-final" class="section-dark cta-band">
+    <div class="container">
+      <div class="cta-band-inner" data-anim="fade-up">
+        <h2>No deje que el tiempo<br/><span class="gradient-text">trabaje en su contra.</span></h2>
+        <p>Muchos derechos tienen plazos de caducidad. Actúe hoy y proteja lo que es suyo.</p>
+        <a href="#calculador" class="btn btn-primary magnetic large">
+          <span>Evaluar mi caso ahora — es gratis</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer id="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#hero" class="footer-logo-link">
+          <img src="Gemini_Generated_Image_y37xbry37xbry37x.png" alt="Soluciones Jurídicas" class="footer-logo-img" />
+        </a>
+        <p>Defensa legal especializada en derecho administrativo, infracciones de tránsito y protección de datos en Colombia.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn tiktok" aria-label="TikTok" target="_blank" rel="noopener">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+          <a href="#" class="social-btn instagram" aria-label="Instagram" target="_blank" rel="noopener">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="#" class="social-btn facebook" aria-label="Facebook" target="_blank" rel="noopener">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="#servicios">Nulidad de Fotomultas</a></li>
+          <li><a href="#servicios">Habeas Data</a></li>
+          <li><a href="#servicios">Derecho Administrativo</a></li>
+          <li><a href="#servicios">Insolvencia Personal</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="#proceso">Nuestro Proceso</a></li>
+          <li><a href="#resultados">Resultados</a></li>
+          <li><a href="#testimonios">Testimonios</a></li>
+          <li><a href="#faq">Preguntas Frecuentes</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contacto directo</h4>
+        <a href="https://wa.me/573027540803" class="footer-wa">
+          <i class="fa-brands fa-whatsapp"></i>
+          Escribir por WhatsApp
+        </a>
+        <p class="footer-legal">© 2025 Soluciones Jurídicas. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══════════════ WHATSAPP FLOAT ══════════════ -->
+  <a href="https://wa.me/573027540803" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="wa-pulse"></span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
